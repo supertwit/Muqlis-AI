@@ -7,8 +7,7 @@ import NotFound from "./pages/NotFound";
 
 export default (
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/count" element={<ChatUI />} />
+    <Route path="/" element={<ChatUI />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 );
