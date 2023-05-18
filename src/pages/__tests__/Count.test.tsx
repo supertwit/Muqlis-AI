@@ -3,7 +3,7 @@ import { expect, it } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { render } from "../../utils/rtl-wrapper";
 
-import Count from "../Count";
+import Count from "../ChatUI";
 
 it("renders <Count /> page", () => {
   const { getByText } = render(<Count />);
