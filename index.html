@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="muqlis-ai.apps.googleusercontent.com">
     <title>React Boilerplate</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 
 <body>
     <div id="app"></div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="module" src="/src/app.tsx"></script>
+    <script>
+        gapi.load('auth2', function() {
+            gapi.auth2.init();
+        });
+    </script>
 </body>
 
 </html>
