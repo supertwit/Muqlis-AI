@@ -25,15 +25,6 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-
-
 export default function Navbar() {
   return (
     <Disclosure as="nav" style={{background: "linear-gradient(90deg,var(--brand-2) 0%,var(--brand-1) 98%)"}}>
@@ -93,7 +84,6 @@ export default function Navbar() {
                     <FaceSmileIcon className="mr-1 h-5 w-5" aria-hidden="true" />
                   </button>
                 </div> */}
-                    <div class="g-signin2" data-onsuccess={onSignIn}></div>
                 <div className="hidden">
                   <button
                     type="button"
